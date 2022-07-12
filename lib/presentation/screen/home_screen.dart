@@ -1,9 +1,12 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_eccomerce_bloc/data/models/category_model.dart';
 import 'package:flutter_eccomerce_bloc/presentation/widgets/custom_app_bar.dart';
 import 'package:flutter_eccomerce_bloc/presentation/widgets/custom_nav_bar.dart';
+import 'package:flutter_eccomerce_bloc/presentation/widgets/hero_carousell_card.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  HomeScreen({Key? key}) : super(key: key);
 
   static const String routeName = "/";
   static Route route() {
@@ -15,8 +18,18 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(title: "Flutter Ecommerce"),
       bottomNavigationBar: CustomNavBar(),
-      body: Center(
-        child: Text('Home'),
+      body: Container(
+        child: CarouselSlider(
+          options: CarouselOptions(
+            aspectRatio: 1.5,
+            viewportFraction: 0.9,
+            enlargeStrategy: CenterPageEnlargeStrategy.height,
+            enlargeCenterPage: true,
+          ),
+          items: Category.categories
+              .map((category) => HeroCarrouselCard(category: category))
+              .toList(),
+        ),
       ),
     );
   }
