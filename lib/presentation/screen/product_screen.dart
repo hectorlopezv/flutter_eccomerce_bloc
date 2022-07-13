@@ -38,8 +38,8 @@ class ProductScreen extends StatelessWidget {
               ),
               IconButton(
                 onPressed: () {
-                  context.read<WishlistBloc>().add(
-                        AddProductToWishList(product),
+                   context.read<WishlistBloc>().add(
+                         AddProductToWishList(product),
                       );
 
                   final snackBar = SnackBar(

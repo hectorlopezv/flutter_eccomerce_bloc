@@ -14,7 +14,6 @@ class WishlistBloc extends Bloc<WishlistEvent, WishlistState> {
   }
   void _onLoadWishlist(event, Emitter<WishlistState> emit) async {
     emit(WishlistLoading());
- 
     try {
       emit(WishlistLoaded());
     } on Exception {

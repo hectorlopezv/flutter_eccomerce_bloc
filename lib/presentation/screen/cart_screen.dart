@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_eccomerce_bloc/presentation/widgets/cart_screen_bottom.dart';
+import 'package:flutter_eccomerce_bloc/presentation/widgets/cart_screen_top.dart';
 import 'package:flutter_eccomerce_bloc/presentation/widgets/custom_app_bar.dart';
-import 'package:flutter_eccomerce_bloc/presentation/widgets/custom_nav_bar.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({Key? key}) : super(key: key);
@@ -10,14 +11,41 @@ class CartScreen extends StatelessWidget {
     return MaterialPageRoute(builder: (context) => CartScreen());
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: CustomNavBar(),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.black,
+        child: Container(
+          height: 70,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(primary: Colors.white),
+                onPressed: () {},
+                child: Text(
+                  "Go to Checkout",
+                  style: Theme.of(context).textTheme.headline3,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
       body: ScrollableAppBar(
-        title: "Flutter Ecommerce",
-        children: [Text("Cart Screen")],
+        title: "Cart",
+        children: [
+          Container(
+            height: MediaQuery.of(context).size.height * 0.7,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 10, right: 20),
+              child: Column(
+                children: [CartScreenTop(), Spacer(), CartScreenBottom()],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
