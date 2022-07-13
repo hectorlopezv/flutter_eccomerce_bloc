@@ -20,43 +20,36 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CustomNavBar(),
-      body: NestedScrollView(
-        floatHeaderSlivers: true,
-        headerSliverBuilder: (context, innerBoxIsScrolled) => [
-          CustomAppBar(title: "Flutter Ecommerce"),
+      body: ScrollableAppBar(
+        title: "Flutter Ecommerce",
+        children: [
+          CarouselSlider(
+            options: CarouselOptions(
+              aspectRatio: 1.5,
+              viewportFraction: 0.9,
+              enlargeStrategy: CenterPageEnlargeStrategy.height,
+              enlargeCenterPage: true,
+            ),
+            items: Category.categories
+                .map((category) => HeroCarrouselCard(category: category))
+                .toList(),
+          ),
+          const SectionTitle(
+            title: "RECOMMENDED",
+          ),
+          ProductsCarrousel(
+            products: Product.products
+                .where((product) => product.isRecommended)
+                .toList(),
+          ),
+          const SectionTitle(
+            title: "Most Popular",
+          ),
+          ProductsCarrousel(
+            products:
+                Product.products.where((product) => product.isPopular).toList(),
+          )
         ],
-        body: ListView(
-          padding: const EdgeInsets.only(bottom: 20),
-          children: [
-            CarouselSlider(
-              options: CarouselOptions(
-                aspectRatio: 1.5,
-                viewportFraction: 0.9,
-                enlargeStrategy: CenterPageEnlargeStrategy.height,
-                enlargeCenterPage: true,
-              ),
-              items: Category.categories
-                  .map((category) => HeroCarrouselCard(category: category))
-                  .toList(),
-            ),
-            const SectionTitle(
-              title: "RECOMMENDED",
-            ),
-            ProductsCarrousel(
-              products: Product.products
-                  .where((product) => product.isRecommended)
-                  .toList(),
-            ),
-            const SectionTitle(
-              title: "Most Popular",
-            ),
-            ProductsCarrousel(
-              products: Product.products
-                  .where((product) => product.isPopular)
-                  .toList(),
-            )
-          ],
-        ),
       ),
     );
   }

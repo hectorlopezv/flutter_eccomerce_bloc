@@ -13,10 +13,10 @@ class CatalogScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: "Flutter Ecommerce"),
       bottomNavigationBar: CustomNavBar(),
-      body: Center(
-        child: Text("catalog"),
+      body: ScrollableAppBar(
+        title: "Flutter Ecommerce",
+        children: [Text("Catalog Screen")],
       ),
     );
   }

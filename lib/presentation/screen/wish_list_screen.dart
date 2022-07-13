@@ -13,10 +13,10 @@ class WishListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: "Flutter Ecommerce"),
       bottomNavigationBar: CustomNavBar(),
-      body: Center(
-        child: Text("wish_list"),
+      body: ScrollableAppBar(
+        title: "Flutter Ecommerce",
+        children: [Text("Wish Screen")],
       ),
     );
   }

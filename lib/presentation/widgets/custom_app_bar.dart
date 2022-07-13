@@ -35,3 +35,25 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
     );
   }
 }
+
+class ScrollableAppBar extends StatelessWidget {
+  final String title;
+  final List<Widget> children;
+  const ScrollableAppBar(
+      {Key? key, required this.children, required this.title})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return NestedScrollView(
+      floatHeaderSlivers: true,
+      headerSliverBuilder: (context, innerBoxIsScrolled) => [
+        CustomAppBar(title: title),
+      ],
+      body: ListView(
+        padding: const EdgeInsets.only(bottom: 20),
+        children: children,
+      ),
+    );
+  }
+}

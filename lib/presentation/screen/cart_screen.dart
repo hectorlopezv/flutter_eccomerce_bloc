@@ -10,13 +10,14 @@ class CartScreen extends StatelessWidget {
     return MaterialPageRoute(builder: (context) => CartScreen());
   }
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: "Flutter Ecommerce"),
       bottomNavigationBar: CustomNavBar(),
-      body: Center(
-        child: Text("Cart"),
+      body: ScrollableAppBar(
+        title: "Flutter Ecommerce",
+        children: [Text("Cart Screen")],
       ),
     );
   }
