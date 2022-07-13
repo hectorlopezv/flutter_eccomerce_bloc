@@ -45,11 +45,13 @@ class ScrollableAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return NestedScrollView(
+      
       floatHeaderSlivers: true,
       headerSliverBuilder: (context, innerBoxIsScrolled) => [
         CustomAppBar(title: title),
       ],
       body: ListView.builder(
+        padding: EdgeInsets.symmetric(vertical: 10),
         shrinkWrap: true,
         itemBuilder: (context, index) {
           return children[index];

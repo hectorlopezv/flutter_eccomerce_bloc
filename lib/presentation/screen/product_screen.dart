@@ -1,6 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_eccomerce_bloc/data/models/product_model.dart';
+import 'package:flutter_eccomerce_bloc/logic/blocs/wishlist_bloc/wishlist_bloc.dart';
 import 'package:flutter_eccomerce_bloc/presentation/widgets/custom_app_bar.dart';
 import 'package:flutter_eccomerce_bloc/presentation/widgets/hero_carousell_card.dart';
 
@@ -35,7 +37,17 @@ class ProductScreen extends StatelessWidget {
                 ),
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  context.read<WishlistBloc>().add(
+                        AddProductToWishList(product),
+                      );
+
+                  final snackBar = SnackBar(
+                    content: Text('Product added to wishlist'),
+                    duration: Duration(seconds: 1),
+                  );
+                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                },
                 icon: Icon(Icons.favorite),
                 color: Colors.white,
               ),

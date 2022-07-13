@@ -21,7 +21,7 @@ class CustomNavBar extends StatelessWidget {
               onPressed: () {
                 nextRoute(context, "/");
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.home,
                 color: Colors.white,
               ),
@@ -30,7 +30,7 @@ class CustomNavBar extends StatelessWidget {
               onPressed: () {
                 nextRoute(context, "/cart");
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.shopping_cart,
                 color: Colors.white,
               ),
@@ -39,7 +39,7 @@ class CustomNavBar extends StatelessWidget {
               onPressed: () {
                 nextRoute(context, "/user");
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.person,
                 color: Colors.white,
               ),
