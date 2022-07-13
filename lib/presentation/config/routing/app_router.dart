@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_eccomerce_bloc/data/models/category_model.dart';
 import 'package:flutter_eccomerce_bloc/presentation/screen/cart_screen.dart';
 import 'package:flutter_eccomerce_bloc/presentation/screen/catalog_screen.dart';
 import 'package:flutter_eccomerce_bloc/presentation/screen/home_screen.dart';
@@ -17,7 +18,7 @@ class AppRouter {
       case WishListScreen.routeName:
         return WishListScreen.route();
       case CatalogScreen.routeName:
-        return CatalogScreen.route();
+        return CatalogScreen.route(category: settings.arguments as Category);
       default:
         return _errorRoute();
     }

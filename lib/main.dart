@@ -14,10 +14,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
-        initialRoute: HomeScreen.routeName,
-        onGenerateRoute: AppRouter.onGenerateRoute,
-        theme: theme(),
-        home: HomeScreen());
+      title: 'Flutter Demo',
+      initialRoute: HomeScreen.routeName,
+      onGenerateRoute: AppRouter.onGenerateRoute,
+      theme: theme(),
+      home: HomeScreen(),
+    );
   }
 }

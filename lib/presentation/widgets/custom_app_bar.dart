@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
-class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
+class CustomAppBar extends StatelessWidget {
   final String title;
   const CustomAppBar({Key? key, required this.title}) : super(key: key);
-  @override
-  Size get preferredSize => const Size.fromHeight(50);
+
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
@@ -50,9 +49,12 @@ class ScrollableAppBar extends StatelessWidget {
       headerSliverBuilder: (context, innerBoxIsScrolled) => [
         CustomAppBar(title: title),
       ],
-      body: ListView(
-        padding: const EdgeInsets.only(bottom: 20),
-        children: children,
+      body: ListView.builder(
+        shrinkWrap: true,
+        itemBuilder: (context, index) {
+          return children[index];
+        },
+        itemCount: children.length,
       ),
     );
   }
