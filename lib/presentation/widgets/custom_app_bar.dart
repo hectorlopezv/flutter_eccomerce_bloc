@@ -7,7 +7,7 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   Size get preferredSize => const Size.fromHeight(50);
   @override
   Widget build(BuildContext context) {
-    return AppBar(
+    return SliverAppBar(
       title: Container(
         color: Colors.black,
         padding: const EdgeInsets.symmetric(
