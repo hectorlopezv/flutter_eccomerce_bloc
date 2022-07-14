@@ -14,6 +14,7 @@ class ProductScreen extends StatelessWidget {
   static const String routeName = "/product";
   static Route route({required Product product}) {
     return MaterialPageRoute(
+      settings: RouteSettings(name: routeName),
       builder: (context) => ProductScreen(
         product: product,
       ),

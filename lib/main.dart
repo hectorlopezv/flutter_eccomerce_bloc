@@ -6,11 +6,11 @@ import 'package:flutter_eccomerce_bloc/logic/blocs/wishlist_bloc/wishlist_bloc.d
 import 'package:flutter_eccomerce_bloc/presentation/config/routing/app_router.dart';
 import 'package:flutter_eccomerce_bloc/presentation/config/styles/theme.dart';
 import 'package:flutter_eccomerce_bloc/presentation/screen/home_screen.dart';
+import 'package:flutter_eccomerce_bloc/presentation/screen/splash_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
-  runApp(const MyApp());
   BlocOverrides.runZoned(
     () => runApp(const MyApp()),
     blocObserver: SimpleBlocObserver(),
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
-        initialRoute: HomeScreen.routeName,
+        initialRoute: "/splash",
         onGenerateRoute: AppRouter.onGenerateRoute,
         theme: theme(),
         home: HomeScreen(),

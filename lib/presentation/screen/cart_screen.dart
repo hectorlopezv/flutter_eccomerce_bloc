@@ -9,7 +9,9 @@ class CartScreen extends StatelessWidget {
 
   static const String routeName = "/cart";
   static Route route() {
-    return MaterialPageRoute(builder: (context) => CartScreen());
+    return MaterialPageRoute(
+        builder: (context) => CartScreen(),
+        settings: RouteSettings(name: routeName));
   }
 
   @override

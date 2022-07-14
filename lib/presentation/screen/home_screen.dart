@@ -9,11 +9,13 @@ import 'package:flutter_eccomerce_bloc/presentation/widgets/products_carrousel.d
 import 'package:flutter_eccomerce_bloc/presentation/widgets/section_title.dart';
 
 class HomeScreen extends StatelessWidget {
-  HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({Key? key}) : super(key: key);
 
   static const String routeName = "/";
   static Route route() {
-    return MaterialPageRoute(builder: (context) => HomeScreen());
+    return MaterialPageRoute(
+        builder: (context) => HomeScreen(),
+        settings: RouteSettings(name: routeName));
   }
 
   @override

@@ -10,7 +10,9 @@ class WishListScreen extends StatelessWidget {
 
   static const String routeName = "/wish_list";
   static Route route() {
-    return MaterialPageRoute(builder: (context) => WishListScreen());
+    return MaterialPageRoute(
+        builder: (context) => WishListScreen(),
+        settings: RouteSettings(name: routeName));
   }
 
   @override

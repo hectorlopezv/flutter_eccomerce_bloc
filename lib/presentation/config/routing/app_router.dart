@@ -5,6 +5,7 @@ import 'package:flutter_eccomerce_bloc/presentation/screen/cart_screen.dart';
 import 'package:flutter_eccomerce_bloc/presentation/screen/catalog_screen.dart';
 import 'package:flutter_eccomerce_bloc/presentation/screen/home_screen.dart';
 import 'package:flutter_eccomerce_bloc/presentation/screen/product_screen.dart';
+import 'package:flutter_eccomerce_bloc/presentation/screen/splash_screen.dart';
 import 'package:flutter_eccomerce_bloc/presentation/screen/wish_list_screen.dart';
 
 class AppRouter {
@@ -14,6 +15,8 @@ class AppRouter {
         return HomeScreen.route();
       case CartScreen.routeName:
         return CartScreen.route();
+      case SplashScreen.routeName:
+        return SplashScreen.route();
       case ProductScreen.routeName:
         return ProductScreen.route(product: settings.arguments as Product);
       case WishListScreen.routeName:
