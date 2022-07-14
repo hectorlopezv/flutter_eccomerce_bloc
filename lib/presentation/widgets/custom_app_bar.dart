@@ -39,15 +39,13 @@ class ScrollableAppBar extends StatelessWidget {
           elevation: 0,
         )
       ],
-      body: Expanded(
-        child: ListView.builder(
-          padding: EdgeInsets.symmetric(vertical: 10),
-          shrinkWrap: true,
-          itemBuilder: (context, index) {
-            return children[index];
-          },
-          itemCount: children.length,
-        ),
+      body: ListView.builder(
+        padding: EdgeInsets.symmetric(vertical: 10),
+        shrinkWrap: true,
+        itemBuilder: (context, index) {
+          return children[index];
+        },
+        itemCount: children.length,
       ),
     );
   }

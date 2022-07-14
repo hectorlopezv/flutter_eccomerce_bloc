@@ -5,7 +5,10 @@ import 'package:flutter_eccomerce_bloc/logic/blocs/cart_bloc/cart_bloc.dart';
 
 class CardProductCard extends StatelessWidget {
   final Product product;
-  const CardProductCard({Key? key, required this.product}) : super(key: key);
+  final int quantity;
+  const CardProductCard(
+      {Key? key, required this.product, required this.quantity})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,20 +25,18 @@ class CardProductCard extends StatelessWidget {
           const SizedBox(
             width: 10,
           ),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  product.name,
-                  style: Theme.of(context).textTheme.headline5,
-                ),
-                Text(
-                  "\$${product.price}",
-                  style: Theme.of(context).textTheme.headline6,
-                ),
-              ],
-            ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                product.name,
+                style: Theme.of(context).textTheme.headline5,
+              ),
+              Text(
+                "\$${product.price}",
+                style: Theme.of(context).textTheme.headline6,
+              ),
+            ],
           ),
           const SizedBox(
             width: 10,
@@ -55,7 +56,7 @@ class CardProductCard extends StatelessWidget {
                 },
               ),
               Text(
-                "1",
+                "$quantity",
                 style: Theme.of(context).textTheme.headline5,
               ),
               BlocBuilder<CartBloc, CartState>(
