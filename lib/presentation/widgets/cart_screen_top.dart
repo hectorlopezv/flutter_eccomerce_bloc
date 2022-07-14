@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_eccomerce_bloc/data/models/product_model.dart';
+import 'package:flutter_eccomerce_bloc/data/models/cart_model.dart';
 import 'package:flutter_eccomerce_bloc/presentation/widgets/cart_product_card.dart';
 
 class CartScreenTop extends StatelessWidget {
@@ -13,15 +13,15 @@ class CartScreenTop extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              "Add \$20.0 for FREE Shipping",
+              Cart().freeDeliveryString,
               style: Theme.of(context).textTheme.headline5,
             ),
-          
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                  primary: Colors.black,
-                  shape: const RoundedRectangleBorder(),
-                  elevation: 0),
+                primary: Colors.black,
+                shape: const RoundedRectangleBorder(),
+                elevation: 0,
+              ),
               onPressed: () {
                 Navigator.pushNamed(context, "/");
               },
@@ -35,14 +35,14 @@ class CartScreenTop extends StatelessWidget {
             )
           ],
         ),
-        const SizedBox(
-          height: 10,
-        ),
-        CardProductCard(
-          product: Product.products[0],
-        ),
-        CardProductCard(
-          product: Product.products[0],
+        SizedBox(
+          height: 370,
+          child: ListView.builder(
+            itemBuilder: (context, index) {
+              return CardProductCard(product: Cart().products[index]);
+            },
+            itemCount: Cart().products.length,
+          ),
         ),
       ],
     );

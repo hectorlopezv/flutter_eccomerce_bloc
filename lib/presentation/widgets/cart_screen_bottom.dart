@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_eccomerce_bloc/data/models/cart_model.dart';
 
 class CartScreenBottom extends StatelessWidget {
   const CartScreenBottom({Key? key}) : super(key: key);
@@ -22,7 +23,7 @@ class CartScreenBottom extends StatelessWidget {
                     style: Theme.of(context).textTheme.headline5,
                   ),
                   Text(
-                    "\$5.98",
+                    Cart().subtotalString,
                     style: Theme.of(context).textTheme.headline5,
                   ),
                 ],
@@ -38,7 +39,7 @@ class CartScreenBottom extends StatelessWidget {
                     style: Theme.of(context).textTheme.headline5,
                   ),
                   Text(
-                    "\$5.98",
+                    Cart().deliveryFeeString,
                     style: Theme.of(context).textTheme.headline5,
                   ),
                 ],
@@ -75,7 +76,7 @@ class CartScreenBottom extends StatelessWidget {
                           ?.copyWith(color: Colors.white),
                     ),
                     Text(
-                      "\$5.98",
+                      Cart().totalString,
                       style: Theme.of(context)
                           .textTheme
                           .headline5

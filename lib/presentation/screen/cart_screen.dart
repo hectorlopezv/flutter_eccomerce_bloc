@@ -17,7 +17,7 @@ class CartScreen extends StatelessWidget {
       bottomNavigationBar: BottomAppBar(
         color: Colors.black,
         child: Container(
-          height: 70,
+          height: 80,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -36,13 +36,13 @@ class CartScreen extends StatelessWidget {
       body: ScrollableAppBar(
         title: "Cart",
         children: [
-          Container(
-            height: MediaQuery.of(context).size.height * 0.7,
-            child: Padding(
-              padding: const EdgeInsets.only(left: 10, right: 20),
-              child: Column(
-                children: [CartScreenTop(), Spacer(), CartScreenBottom()],
-              ),
+          Padding(
+            padding: const EdgeInsets.only(left: 10, right: 20),
+            child: Column(
+              children: [
+                CartScreenTop(),
+                CartScreenBottom()
+              ],
             ),
           ),
         ],
