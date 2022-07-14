@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_eccomerce_bloc/data/models/product_model.dart';
+import 'package:flutter_eccomerce_bloc/logic/blocs/cart_bloc/cart_bloc.dart';
 
 class CardProductCard extends StatelessWidget {
   final Product product;
@@ -40,17 +42,40 @@ class CardProductCard extends StatelessWidget {
           ),
           Row(
             children: [
-              IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.remove_circle),
+              BlocBuilder<CartBloc, CartState>(
+                builder: (context, state) {
+                  return IconButton(
+                    onPressed: () {
+                      context.read<CartBloc>().add(
+                            RemoveProductFromCartList(product),
+                          );
+                    },
+                    icon: const Icon(Icons.remove_circle),
+                  );
+                },
               ),
               Text(
                 "1",
                 style: Theme.of(context).textTheme.headline5,
               ),
-              IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.add_circle),
+              BlocBuilder<CartBloc, CartState>(
+                builder: (context, state) {
+                  if (state is CartLoaded) {
+                    return IconButton(
+                      onPressed: () {
+                        context.read<CartBloc>().add(
+                              AddProductToCartList(product),
+                            );
+                      },
+                      icon: const Icon(Icons.add_circle),
+                    );
+                  }
+                  if (state is CartLoading) {
+                    return Center(child: CircularProgressIndicator());
+                  }
+
+                  return Text("Something went Wrong");
+                },
               )
             ],
           )

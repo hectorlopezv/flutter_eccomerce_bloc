@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_eccomerce_bloc/data/models/product_model.dart';
+import 'package:flutter_eccomerce_bloc/logic/blocs/cart_bloc/cart_bloc.dart';
 
 class ProductCard extends StatelessWidget {
   final double leftPosition;
@@ -81,7 +83,11 @@ class ProductCard extends StatelessWidget {
                     ),
                     Expanded(
                       child: IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          context.read<CartBloc>().add(
+                                AddProductToCartList(product),
+                              );
+                        },
                         icon: Icon(
                           Icons.add_circle,
                           color: Colors.white,

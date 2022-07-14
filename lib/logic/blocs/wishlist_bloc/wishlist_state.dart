@@ -1,7 +1,7 @@
 part of 'wishlist_bloc.dart';
 
 abstract class WishlistState extends Equatable {
-  WishlistState();
+  const WishlistState();
   @override
   List<Object> get props => [];
 }

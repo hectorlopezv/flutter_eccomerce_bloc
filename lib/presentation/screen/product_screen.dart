@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_eccomerce_bloc/data/models/product_model.dart';
+import 'package:flutter_eccomerce_bloc/logic/blocs/cart_bloc/cart_bloc.dart';
 import 'package:flutter_eccomerce_bloc/logic/blocs/wishlist_bloc/wishlist_bloc.dart';
 import 'package:flutter_eccomerce_bloc/presentation/widgets/custom_app_bar.dart';
 import 'package:flutter_eccomerce_bloc/presentation/widgets/hero_carousell_card.dart';
@@ -38,8 +39,8 @@ class ProductScreen extends StatelessWidget {
               ),
               IconButton(
                 onPressed: () {
-                   context.read<WishlistBloc>().add(
-                         AddProductToWishList(product),
+                  context.read<WishlistBloc>().add(
+                        AddProductToWishList(product),
                       );
 
                   final snackBar = SnackBar(
@@ -53,7 +54,12 @@ class ProductScreen extends StatelessWidget {
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(primary: Colors.white),
-                onPressed: () {},
+                onPressed: () {
+                  context.read<CartBloc>().add(
+                        AddProductToCartList(product),
+                      );
+                  Navigator.pushNamed(context, "/cart");
+                },
                 child: Text(
                   "Add to cart",
                   style: Theme.of(context).textTheme.headline3,
