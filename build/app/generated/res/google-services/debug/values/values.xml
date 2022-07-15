@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">92993752676-drqlnralqj3tf6iqgfsv0vaanvgnek6e.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">92993752676</string>
+    <string name="google_api_key" translatable="false">AIzaSyDL8aTb7BhdH3rzDpfRxO_GRr0DXcTl9_w</string>
+    <string name="google_app_id" translatable="false">1:92993752676:android:e0ef80e370eae761ac1971</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDL8aTb7BhdH3rzDpfRxO_GRr0DXcTl9_w</string>
+    <string name="google_storage_bucket" translatable="false">flutter-ecommer-app.appspot.com</string>
+    <string name="project_id" translatable="false">flutter-ecommer-app</string>
+</resources>

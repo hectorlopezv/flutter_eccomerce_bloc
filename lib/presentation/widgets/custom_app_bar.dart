@@ -13,17 +13,20 @@ class ScrollableAppBar extends StatelessWidget {
       floatHeaderSlivers: true,
       headerSliverBuilder: (context, innerBoxIsScrolled) => [
         SliverAppBar(
-          title: Container(
-            color: Colors.black,
-            padding: const EdgeInsets.symmetric(
-              horizontal: 20,
-              vertical: 10,
-            ),
-            child: Text(
-              title,
-              style: Theme.of(context).textTheme.headline2?.copyWith(
-                    color: Colors.white,
-                  ),
+          
+          title: Center(
+            child: Container(
+              color: Colors.black,
+              padding: const EdgeInsets.symmetric(
+                horizontal: 20,
+                vertical: 10,
+              ),
+              child: Text(
+                title,
+                style: Theme.of(context).textTheme.headline2?.copyWith(
+                      color: Colors.white,
+                    ),
+              ),
             ),
           ),
           iconTheme: const IconThemeData(color: Colors.black),
@@ -40,6 +43,7 @@ class ScrollableAppBar extends StatelessWidget {
         )
       ],
       body: ListView.builder(
+        physics: BouncingScrollPhysics(),
         padding: EdgeInsets.symmetric(vertical: 10),
         shrinkWrap: true,
         itemBuilder: (context, index) {

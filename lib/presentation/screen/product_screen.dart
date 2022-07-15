@@ -74,6 +74,7 @@ class ProductScreen extends StatelessWidget {
         title: product.name,
         children: [
           ListView(
+            physics: BouncingScrollPhysics(),
             shrinkWrap: true,
             children: [
               CarouselSlider(

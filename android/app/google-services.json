@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "92993752676",
+    "project_id": "flutter-ecommer-app",
+    "storage_bucket": "flutter-ecommer-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:92993752676:android:e0ef80e370eae761ac1971",
+        "android_client_info": {
+          "package_name": "com.example.flutter_eccomerce_bloc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "92993752676-drqlnralqj3tf6iqgfsv0vaanvgnek6e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDL8aTb7BhdH3rzDpfRxO_GRr0DXcTl9_w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "92993752676-drqlnralqj3tf6iqgfsv0vaanvgnek6e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "92993752676-56cj3fpqau2ssr7i59k2j6gd48ncmnbp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flutterEccomerceBloc"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

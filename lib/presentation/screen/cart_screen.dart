@@ -87,6 +87,8 @@ class CartScreen extends StatelessWidget {
                               SizedBox(
                                 height: 370,
                                 child: ListView.builder(
+                                  physics: BouncingScrollPhysics(),
+                                  shrinkWrap: true,
                                   itemBuilder: (context, index) {
                                     final product = state.cart
                                         .productQuantity(state.cart.products);

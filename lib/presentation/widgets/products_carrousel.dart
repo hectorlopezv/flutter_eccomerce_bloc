@@ -11,6 +11,7 @@ class ProductsCarrousel extends StatelessWidget {
     return SizedBox(
       height: 165,
       child: ListView.builder(
+        physics: BouncingScrollPhysics(),
         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         itemBuilder: (context, index) {
           return Padding(
