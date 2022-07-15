@@ -2,9 +2,11 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_eccomerce_bloc/data/repositories/category/category_repository.dart';
+import 'package:flutter_eccomerce_bloc/data/repositories/checkout/checkout_repository.dart';
 import 'package:flutter_eccomerce_bloc/data/repositories/product/product_repository.dart';
 import 'package:flutter_eccomerce_bloc/logic/blocs/cart_bloc/cart_bloc.dart';
 import 'package:flutter_eccomerce_bloc/logic/blocs/category_bloc/category_bloc.dart';
+import 'package:flutter_eccomerce_bloc/logic/blocs/checkout_bloc/checkout_bloc.dart';
 import 'package:flutter_eccomerce_bloc/logic/blocs/observer_logs_bloc/observer_logs_bloc.dart';
 import 'package:flutter_eccomerce_bloc/logic/blocs/product_bloc/product_bloc.dart';
 import 'package:flutter_eccomerce_bloc/logic/blocs/wishlist_bloc/wishlist_bloc.dart';
@@ -31,25 +33,29 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider<WishlistBloc>(
-          create: (context) => WishlistBloc()..add(LoadWishList()),
+          create: (_) => WishlistBloc()..add(LoadWishList()),
         ),
         BlocProvider<CartBloc>(
-          create: (context) => CartBloc()..add(LoadCart()),
+          create: (_) => CartBloc()..add(LoadCart()),
         ),
         BlocProvider<CategoryBloc>(
-          create: (context) =>
-              CategoryBloc(categoryRepository: CategoryRepository())
-                ..add(LoadCategoryList()),
+          create: (_) => CategoryBloc(categoryRepository: CategoryRepository())
+            ..add(LoadCategoryList()),
         ),
         BlocProvider<ProductBloc>(
-          create: (context) =>
-              ProductBloc(productRepository: ProductRepository())
-                ..add(LoadProductList()),
+          create: (_) => ProductBloc(productRepository: ProductRepository())
+            ..add(LoadProductList()),
+        ),
+        BlocProvider<CheckoutBloc>(
+          create: (context) => CheckoutBloc(
+            checkoutRepository: CheckOutRepository(),
+            cartBloc: context.read<CartBloc>(),
+          ),
         ),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
-        initialRoute: "/checkout",
+        initialRoute: "/splash",
         onGenerateRoute: AppRouter.onGenerateRoute,
         theme: theme(),
         home: HomeScreen(),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_eccomerce_bloc/logic/blocs/checkout_bloc/checkout_bloc.dart';
 import 'package:flutter_eccomerce_bloc/presentation/widgets/custom_app_bar.dart';
 import 'package:flutter_eccomerce_bloc/presentation/widgets/order_summary.dart';
 
@@ -15,7 +17,7 @@ class CheckOutScreen extends StatelessWidget {
   Widget _buildTextFormFiled(
     String label,
     BuildContext context,
-    TextEditingController controller, {
+    Function(String)? onchaged, {
     bool obscureText = false,
     TextInputType textInputType = TextInputType.text,
     IconData icon = Icons.access_alarm,
@@ -31,7 +33,7 @@ class CheckOutScreen extends StatelessWidget {
           ),
           Expanded(
             child: TextFormField(
-              controller: controller,
+              onChanged: onchaged,
               obscureText: obscureText,
               keyboardType: textInputType,
               enabled: enabled,
@@ -53,13 +55,6 @@ class CheckOutScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TextEditingController emailController = TextEditingController();
-    final TextEditingController nameController = TextEditingController();
-    final TextEditingController addressController = TextEditingController();
-    final TextEditingController cityController = TextEditingController();
-    final TextEditingController countryController = TextEditingController();
-    final TextEditingController zipCodeController = TextEditingController();
-
     return Scaffold(
       bottomNavigationBar: BottomAppBar(
         color: Colors.black,
@@ -68,13 +63,35 @@ class CheckOutScreen extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(primary: Colors.white),
-                onPressed: () {},
-                child: Text(
-                  "Order Now",
-                  style: Theme.of(context).textTheme.headline3,
-                ),
+              BlocBuilder<CheckoutBloc, CheckoutState>(
+                builder: (context, state) {
+                  if (state is CheckoutOrderLoading) {
+                    return CircularProgressIndicator();
+                  }
+                  if (state is CheckoutOrderLoaded) {
+                    return ElevatedButton(
+                      style: ElevatedButton.styleFrom(primary: Colors.white),
+                      onPressed: () {
+                        context.read<CheckoutBloc>().add(
+                              ConfirmCheckoutOrder(checkout: state.checkout),
+                            );
+                      },
+                      child: Text(
+                        "Order Now",
+                        style: Theme.of(context).textTheme.headline3,
+                      ),
+                    );
+                  }
+                  return Center(
+                    child: Text(
+                      "Something Went Wrong...",
+                      style: Theme.of(context)
+                          .textTheme
+                          .headline3
+                          ?.copyWith(color: Colors.white),
+                    ),
+                  );
+                },
               ),
             ],
           ),
@@ -89,30 +106,94 @@ class CheckOutScreen extends StatelessWidget {
               padding: const EdgeInsets.all(20.0),
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.8,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Customer Information",
-                      style: Theme.of(context).textTheme.headline3,
-                    ),
-                    _buildTextFormFiled("Email", context, emailController),
-                    _buildTextFormFiled("Full Name", context, nameController),
-                    Text(
-                      "Delivery Innformation",
-                      style: Theme.of(context).textTheme.headline3,
-                    ),
-                    _buildTextFormFiled("Address", context, addressController),
-                    _buildTextFormFiled("City", context, cityController),
-                    _buildTextFormFiled("Country", context, countryController),
-                    _buildTextFormFiled("ZipCode", context, zipCodeController),
-                    Text(
-                      "Order Summary",
-                      style: Theme.of(context).textTheme.headline3,
-                    ),
-                    OrderSummary()
-                  ],
+                child: BlocBuilder<CheckoutBloc, CheckoutState>(
+                  builder: (context, state) {
+                    if (state is CheckoutOrderLoading) {
+                      return Center(
+                        child: CircularProgressIndicator(),
+                      );
+                    }
+                    if (state is CheckoutOrderLoaded) {
+                      return Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Customer Information",
+                            style: Theme.of(context).textTheme.headline3,
+                          ),
+                          _buildTextFormFiled(
+                            "Email",
+                            context,
+                            (value) {
+                              context
+                                  .read<CheckoutBloc>()
+                                  .add(UpdateCheckoutOrder(email: value));
+                            },
+                          ),
+                          _buildTextFormFiled(
+                            "Full Name",
+                            context,
+                            (value) {
+                              context
+                                  .read<CheckoutBloc>()
+                                  .add(UpdateCheckoutOrder(fullName: value));
+                            },
+                          ),
+                          Text(
+                            "Delivery Innformation",
+                            style: Theme.of(context).textTheme.headline3,
+                          ),
+                          _buildTextFormFiled(
+                            "Address",
+                            context,
+                            (value) {
+                              context
+                                  .read<CheckoutBloc>()
+                                  .add(UpdateCheckoutOrder(address: value));
+                            },
+                          ),
+                          _buildTextFormFiled(
+                            "City",
+                            context,
+                            (value) {
+                              context
+                                  .read<CheckoutBloc>()
+                                  .add(UpdateCheckoutOrder(city: value));
+                            },
+                          ),
+                          _buildTextFormFiled(
+                            "Country",
+                            context,
+                            (value) {
+                              context
+                                  .read<CheckoutBloc>()
+                                  .add(UpdateCheckoutOrder(country: value));
+                            },
+                          ),
+                          _buildTextFormFiled(
+                            "ZipCode",
+                            context,
+                            (value) {
+                              context
+                                  .read<CheckoutBloc>()
+                                  .add(UpdateCheckoutOrder(zipCode: value));
+                            },
+                          ),
+                          Container(),
+                          Text(
+                            "Order Summary",
+                            style: Theme.of(context).textTheme.headline3,
+                          ),
+                          OrderSummary()
+                        ],
+                      );
+                    }
+
+                    return Center(
+                      child: Text("Something Went Wrong"),
+                    );
+                  },
                 ),
               ),
             )
