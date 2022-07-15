@@ -4,6 +4,23 @@
             "outputFile": "/Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rHK/values-zh-rHK.xml",
             "map": [
                 {
+                    "source": "/Users/hvlopez/.gradle/caches/transforms-3/a4704a6098d47fda30f4098900d7643c/transformed/jetified-play-services-wallet-18.1.2/res/values-zh-rHK/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "206",
+                        "endColumns": "96",
+                        "endOffsets": "302"
+                    },
+                    "to": {
+                        "startLines": "21",
+                        "startColumns": "4",
+                        "startOffsets": "1982",
+                        "endColumns": "100",
+                        "endOffsets": "2078"
+                    }
+                },
+                {
                     "source": "/Users/hvlopez/.gradle/caches/transforms-3/19a0dfd4021b70333b258b23187eb758/transformed/jetified-play-services-basement-18.0.0/res/values-zh-rHK/values.xml",
                     "from": {
                         "startLines": "4",

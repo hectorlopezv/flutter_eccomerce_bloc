@@ -8,6 +8,7 @@ import 'package:flutter_eccomerce_bloc/logic/blocs/cart_bloc/cart_bloc.dart';
 import 'package:flutter_eccomerce_bloc/logic/blocs/category_bloc/category_bloc.dart';
 import 'package:flutter_eccomerce_bloc/logic/blocs/checkout_bloc/checkout_bloc.dart';
 import 'package:flutter_eccomerce_bloc/logic/blocs/observer_logs_bloc/observer_logs_bloc.dart';
+import 'package:flutter_eccomerce_bloc/logic/blocs/payment_bloc/payment_bloc.dart';
 import 'package:flutter_eccomerce_bloc/logic/blocs/product_bloc/product_bloc.dart';
 import 'package:flutter_eccomerce_bloc/logic/blocs/wishlist_bloc/wishlist_bloc.dart';
 import 'package:flutter_eccomerce_bloc/presentation/config/routing/app_router.dart';
@@ -46,16 +47,22 @@ class MyApp extends StatelessWidget {
           create: (_) => ProductBloc(productRepository: ProductRepository())
             ..add(LoadProductList()),
         ),
+        BlocProvider<PaymentBloc>(
+          create: (context) => PaymentBloc()
+            ..add(
+              LoadPaymentMethod(),
+            ),
+        ),
         BlocProvider<CheckoutBloc>(
           create: (context) => CheckoutBloc(
-            checkoutRepository: CheckOutRepository(),
-            cartBloc: context.read<CartBloc>(),
-          ),
+              checkoutRepository: CheckOutRepository(),
+              cartBloc: context.read<CartBloc>(),
+              paymentBloc: context.read<PaymentBloc>()),
         ),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
-        initialRoute: "/order-confirmation",
+        initialRoute: "/",
         onGenerateRoute: AppRouter.onGenerateRoute,
         theme: theme(),
         home: HomeScreen(),

@@ -26,6 +26,7 @@ class UpdateCheckoutOrder extends CheckoutEvent {
   final String? country;
   final String? zipCode;
   final Cart? cart;
+  final PaymentMethod? paymentMethod;
 
   @override
   List<Object?> get props => [
@@ -36,14 +37,17 @@ class UpdateCheckoutOrder extends CheckoutEvent {
         country,
         zipCode,
         cart,
+        paymentMethod,
       ];
 
-  UpdateCheckoutOrder(
-      {this.fullName,
-      this.email,
-      this.address,
-      this.city,
-      this.country,
-      this.zipCode,
-      this.cart});
+  UpdateCheckoutOrder({
+    this.fullName,
+    this.email,
+    this.address,
+    this.city,
+    this.country,
+    this.zipCode,
+    this.cart,
+    this.paymentMethod
+  });
 }

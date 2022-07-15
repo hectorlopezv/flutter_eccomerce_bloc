@@ -128,6 +128,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "flutter_localizations",
+      "rootUri": "file:///Users/hvlopez/flutter/packages/flutter_localizations",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "flutter_plugin_android_lifecycle",
       "rootUri": "file:///Users/hvlopez/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-2.0.7",
       "packageUri": "lib/",
@@ -194,6 +200,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "intl",
+      "rootUri": "file:///Users/hvlopez/.pub-cache/hosted/pub.dartlang.org/intl-0.17.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "js",
       "rootUri": "file:///Users/hvlopez/.pub-cache/hosted/pub.dartlang.org/js-0.6.4",
       "packageUri": "lib/",
@@ -244,6 +256,30 @@
     {
       "name": "path_parsing",
       "rootUri": "file:///Users/hvlopez/.pub-cache/hosted/pub.dartlang.org/path_parsing-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "pay",
+      "rootUri": "file:///Users/hvlopez/.pub-cache/hosted/pub.dartlang.org/pay-1.0.10",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "pay_android",
+      "rootUri": "file:///Users/hvlopez/.pub-cache/hosted/pub.dartlang.org/pay_android-1.0.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "pay_ios",
+      "rootUri": "file:///Users/hvlopez/.pub-cache/hosted/pub.dartlang.org/pay_ios-1.0.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "pay_platform_interface",
+      "rootUri": "file:///Users/hvlopez/.pub-cache/hosted/pub.dartlang.org/pay_platform_interface-1.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -326,13 +362,19 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "yaml",
+      "rootUri": "file:///Users/hvlopez/.pub-cache/hosted/pub.dartlang.org/yaml-3.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_eccomerce_bloc",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2022-07-15T17:23:50.777479Z",
+  "generated": "2022-07-15T18:50:04.723693Z",
   "generator": "pub",
   "generatorVersion": "2.17.5"
 }

@@ -6,6 +6,7 @@ import 'package:flutter_eccomerce_bloc/presentation/screen/catalog_screen.dart';
 import 'package:flutter_eccomerce_bloc/presentation/screen/checkout_screen.dart';
 import 'package:flutter_eccomerce_bloc/presentation/screen/home_screen.dart';
 import 'package:flutter_eccomerce_bloc/presentation/screen/order_confirmation_screen.dart';
+import 'package:flutter_eccomerce_bloc/presentation/screen/payment_selection_screen.dart';
 import 'package:flutter_eccomerce_bloc/presentation/screen/product_screen.dart';
 import 'package:flutter_eccomerce_bloc/presentation/screen/splash_screen.dart';
 import 'package:flutter_eccomerce_bloc/presentation/screen/wish_list_screen.dart';
@@ -25,6 +26,8 @@ class AppRouter {
         return WishListScreen.route();
       case CheckOutScreen.routeName:
         return CheckOutScreen.route();
+      case PaymentSelectionScreen.routeName:
+        return PaymentSelectionScreen.route();
       case OrderConfirmationScreen.routeName:
         return OrderConfirmationScreen.route();
       case CatalogScreen.routeName:

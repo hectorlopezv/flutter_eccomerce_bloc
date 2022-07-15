@@ -7,6 +7,8 @@ MERGED from [:firebase_core] /Users/hvlopez/AndroidStudioProjects/flutter_eccome
 MERGED from [:firebase_core] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
 MERGED from [:image_picker_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-19:19
 MERGED from [:image_picker_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-19:19
+MERGED from [:pay_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/pay_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:5-17:19
+MERGED from [:pay_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/pay_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:5-17:19
 MERGED from [androidx.window:window:1.0.0-beta04] /Users/hvlopez/.gradle/caches/transforms-3/542a859793ec57d6a4d40865c7efc6d9/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:24:5-31:19
 MERGED from [androidx.window:window:1.0.0-beta04] /Users/hvlopez/.gradle/caches/transforms-3/542a859793ec57d6a4d40865c7efc6d9/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:24:5-31:19
 MERGED from [com.google.firebase:firebase-firestore:24.2.0] /Users/hvlopez/.gradle/caches/transforms-3/52bb7ae6a8077fb5fa4462fd0303804c/transformed/jetified-firebase-firestore-24.2.0/AndroidManifest.xml:16:5-24:19
@@ -17,6 +19,10 @@ MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/hvlopez/.g
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/hvlopez/.gradle/caches/transforms-3/8bbf934d4862951386a3804d4b07cb8d/transformed/jetified-firebase-auth-interop-19.0.2/AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-common:20.1.1] /Users/hvlopez/.gradle/caches/transforms-3/fccaa6a289edc53f66333a729d5bb147/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:25:5-38:19
 MERGED from [com.google.firebase:firebase-common:20.1.1] /Users/hvlopez/.gradle/caches/transforms-3/fccaa6a289edc53f66333a729d5bb147/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:25:5-38:19
+MERGED from [com.google.android.gms:play-services-identity:17.0.0] /Users/hvlopez/.gradle/caches/transforms-3/fcc52f610fff961df0ae79750458aee5/transformed/jetified-play-services-identity-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-identity:17.0.0] /Users/hvlopez/.gradle/caches/transforms-3/fcc52f610fff961df0ae79750458aee5/transformed/jetified-play-services-identity-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/hvlopez/.gradle/caches/transforms-3/03999a7c2e7ad5cc9d51e8813344d1ae/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/hvlopez/.gradle/caches/transforms-3/03999a7c2e7ad5cc9d51e8813344d1ae/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:30:5-36:19
 MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/hvlopez/.gradle/caches/transforms-3/19fea4fb28dedd992824e13cc158e7a1/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:19:5-23:19
 MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/hvlopez/.gradle/caches/transforms-3/19fea4fb28dedd992824e13cc158e7a1/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:19:5-23:19
 MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/hvlopez/.gradle/caches/transforms-3/0eca67a449d06f1154e3d0c5a54f4038/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:5:5-20
@@ -41,12 +47,16 @@ MERGED from [:cloud_firestore] /Users/hvlopez/AndroidStudioProjects/flutter_ecco
 MERGED from [:firebase_core] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
 MERGED from [:image_picker_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-21:12
 MERGED from [:flutter_plugin_android_lifecycle] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:pay_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/pay_android/intermediates/merged_manifest/debug/AndroidManifest.xml:6:1-19:12
 MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/hvlopez/.gradle/caches/transforms-3/e1f5bf00836c889852a9a2014464d260/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.window:window:1.0.0-beta04] /Users/hvlopez/.gradle/caches/transforms-3/542a859793ec57d6a4d40865c7efc6d9/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:17:1-33:12
 MERGED from [com.google.firebase:firebase-firestore:24.2.0] /Users/hvlopez/.gradle/caches/transforms-3/52bb7ae6a8077fb5fa4462fd0303804c/transformed/jetified-firebase-firestore-24.2.0/AndroidManifest.xml:2:1-26:12
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0] /Users/hvlopez/.gradle/caches/transforms-3/035af362cba75ba70d871140ede1df7a/transformed/jetified-firebase-appcheck-interop-16.0.0/AndroidManifest.xml:15:1-26:12
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/hvlopez/.gradle/caches/transforms-3/8bbf934d4862951386a3804d4b07cb8d/transformed/jetified-firebase-auth-interop-19.0.2/AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.firebase:firebase-common:20.1.1] /Users/hvlopez/.gradle/caches/transforms-3/fccaa6a289edc53f66333a729d5bb147/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:15:1-40:12
+MERGED from [com.google.android.gms:play-services-wallet:18.1.2] /Users/hvlopez/.gradle/caches/transforms-3/a4704a6098d47fda30f4098900d7643c/transformed/jetified-play-services-wallet-18.1.2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-identity:17.0.0] /Users/hvlopez/.gradle/caches/transforms-3/fcc52f610fff961df0ae79750458aee5/transformed/jetified-play-services-identity-17.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/hvlopez/.gradle/caches/transforms-3/03999a7c2e7ad5cc9d51e8813344d1ae/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:17:1-38:12
 MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/hvlopez/.gradle/caches/transforms-3/7c741d4936f86c00542d609dae4f68c7/transformed/jetified-firebase-database-collection-18.0.1/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/hvlopez/.gradle/caches/transforms-3/19fea4fb28dedd992824e13cc158e7a1/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:16:1-24:12
 MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/hvlopez/.gradle/caches/transforms-3/0eca67a449d06f1154e3d0c5a54f4038/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:2:1-6:12
@@ -99,6 +109,8 @@ MERGED from [:image_picker_android] /Users/hvlopez/AndroidStudioProjects/flutter
 MERGED from [:image_picker_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:flutter_plugin_android_lifecycle] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:flutter_plugin_android_lifecycle] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:pay_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/pay_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-11:41
+MERGED from [:pay_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/pay_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-11:41
 MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/hvlopez/.gradle/caches/transforms-3/e1f5bf00836c889852a9a2014464d260/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/hvlopez/.gradle/caches/transforms-3/e1f5bf00836c889852a9a2014464d260/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.window:window:1.0.0-beta04] /Users/hvlopez/.gradle/caches/transforms-3/542a859793ec57d6a4d40865c7efc6d9/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
@@ -111,6 +123,12 @@ MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/hvlopez/.g
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/hvlopez/.gradle/caches/transforms-3/8bbf934d4862951386a3804d4b07cb8d/transformed/jetified-firebase-auth-interop-19.0.2/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-common:20.1.1] /Users/hvlopez/.gradle/caches/transforms-3/fccaa6a289edc53f66333a729d5bb147/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-common:20.1.1] /Users/hvlopez/.gradle/caches/transforms-3/fccaa6a289edc53f66333a729d5bb147/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-wallet:18.1.2] /Users/hvlopez/.gradle/caches/transforms-3/a4704a6098d47fda30f4098900d7643c/transformed/jetified-play-services-wallet-18.1.2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-wallet:18.1.2] /Users/hvlopez/.gradle/caches/transforms-3/a4704a6098d47fda30f4098900d7643c/transformed/jetified-play-services-wallet-18.1.2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-identity:17.0.0] /Users/hvlopez/.gradle/caches/transforms-3/fcc52f610fff961df0ae79750458aee5/transformed/jetified-play-services-identity-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-identity:17.0.0] /Users/hvlopez/.gradle/caches/transforms-3/fcc52f610fff961df0ae79750458aee5/transformed/jetified-play-services-identity-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/hvlopez/.gradle/caches/transforms-3/03999a7c2e7ad5cc9d51e8813344d1ae/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/hvlopez/.gradle/caches/transforms-3/03999a7c2e7ad5cc9d51e8813344d1ae/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/hvlopez/.gradle/caches/transforms-3/7c741d4936f86c00542d609dae4f68c7/transformed/jetified-firebase-database-collection-18.0.1/AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/hvlopez/.gradle/caches/transforms-3/7c741d4936f86c00542d609dae4f68c7/transformed/jetified-firebase-database-collection-18.0.1/AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/hvlopez/.gradle/caches/transforms-3/19fea4fb28dedd992824e13cc158e7a1/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:18:5-43
@@ -169,6 +187,8 @@ uses-permission#android.permission.INTERNET
 ADDED from /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/android/app/src/debug/AndroidManifest.xml:7:5-66
 MERGED from [com.google.firebase:firebase-firestore:24.2.0] /Users/hvlopez/.gradle/caches/transforms-3/52bb7ae6a8077fb5fa4462fd0303804c/transformed/jetified-firebase-firestore-24.2.0/AndroidManifest.xml:14:5-67
 MERGED from [com.google.firebase:firebase-firestore:24.2.0] /Users/hvlopez/.gradle/caches/transforms-3/52bb7ae6a8077fb5fa4462fd0303804c/transformed/jetified-firebase-firestore-24.2.0/AndroidManifest.xml:14:5-67
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/hvlopez/.gradle/caches/transforms-3/03999a7c2e7ad5cc9d51e8813344d1ae/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/hvlopez/.gradle/caches/transforms-3/03999a7c2e7ad5cc9d51e8813344d1ae/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:24:5-67
 	android:name
 		ADDED from /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/android/app/src/debug/AndroidManifest.xml:7:22-64
 service#com.google.firebase.components.ComponentDiscoveryService
@@ -215,6 +235,12 @@ ADDED from [:image_picker_android] /Users/hvlopez/AndroidStudioProjects/flutter_
 		ADDED from [:image_picker_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-72
 	android:name
 		ADDED from [:image_picker_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
+meta-data#com.google.android.gms.wallet.api.enabled
+ADDED from [:pay_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/pay_android/intermediates/merged_manifest/debug/AndroidManifest.xml:14:9-16:36
+	android:value
+		ADDED from [:pay_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/pay_android/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-33
+	android:name
+		ADDED from [:pay_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/pay_android/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-69
 uses-library#androidx.window.extensions
 ADDED from [androidx.window:window:1.0.0-beta04] /Users/hvlopez/.gradle/caches/transforms-3/542a859793ec57d6a4d40865c7efc6d9/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
 	android:required
@@ -229,6 +255,8 @@ ADDED from [androidx.window:window:1.0.0-beta04] /Users/hvlopez/.gradle/caches/t
 		ADDED from [androidx.window:window:1.0.0-beta04] /Users/hvlopez/.gradle/caches/transforms-3/542a859793ec57d6a4d40865c7efc6d9/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.firebase:firebase-firestore:24.2.0] /Users/hvlopez/.gradle/caches/transforms-3/52bb7ae6a8077fb5fa4462fd0303804c/transformed/jetified-firebase-firestore-24.2.0/AndroidManifest.xml:13:5-79
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/hvlopez/.gradle/caches/transforms-3/03999a7c2e7ad5cc9d51e8813344d1ae/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/hvlopez/.gradle/caches/transforms-3/03999a7c2e7ad5cc9d51e8813344d1ae/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:23:5-79
 MERGED from [io.grpc:grpc-android:1.44.1] /Users/hvlopez/.gradle/caches/transforms-3/6bd2ae4dd04c2b64a50f7e9188ad8e3d/transformed/jetified-grpc-android-1.44.1/AndroidManifest.xml:9:5-79
 MERGED from [io.grpc:grpc-android:1.44.1] /Users/hvlopez/.gradle/caches/transforms-3/6bd2ae4dd04c2b64a50f7e9188ad8e3d/transformed/jetified-grpc-android-1.44.1/AndroidManifest.xml:9:5-79
 	android:name
@@ -251,6 +279,18 @@ ADDED from [com.google.firebase:firebase-common:20.1.1] /Users/hvlopez/.gradle/c
 		ADDED from [com.google.firebase:firebase-common:20.1.1] /Users/hvlopez/.gradle/caches/transforms-3/fccaa6a289edc53f66333a729d5bb147/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:31:13-36
 	android:name
 		ADDED from [com.google.firebase:firebase-common:20.1.1] /Users/hvlopez/.gradle/caches/transforms-3/fccaa6a289edc53f66333a729d5bb147/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:27:13-77
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/hvlopez/.gradle/caches/transforms-3/03999a7c2e7ad5cc9d51e8813344d1ae/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:26:5-28:35
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/hvlopez/.gradle/caches/transforms-3/03999a7c2e7ad5cc9d51e8813344d1ae/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:27:9-41
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/hvlopez/.gradle/caches/transforms-3/03999a7c2e7ad5cc9d51e8813344d1ae/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:28:9-32
+uses-library#org.apache.http.legacy
+ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/hvlopez/.gradle/caches/transforms-3/03999a7c2e7ad5cc9d51e8813344d1ae/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/hvlopez/.gradle/caches/transforms-3/03999a7c2e7ad5cc9d51e8813344d1ae/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:35:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/hvlopez/.gradle/caches/transforms-3/03999a7c2e7ad5cc9d51e8813344d1ae/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:34:13-50
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/hvlopez/.gradle/caches/transforms-3/19fea4fb28dedd992824e13cc158e7a1/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
 	android:exported

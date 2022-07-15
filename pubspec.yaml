@@ -40,6 +40,7 @@ dependencies:
   cloud_firestore: ^3.3.0
   image_picker: ^0.8.5+3
   flutter_svg: ^1.1.1+1
+  pay: ^1.0.10
 
 dev_dependencies:
   flutter_test:
@@ -66,6 +67,7 @@ flutter:
   assets:
     - assets/images/
     - assets/svgs/
+    - assets/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
