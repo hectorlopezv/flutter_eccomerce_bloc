@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
-        initialRoute: "/splash",
+        initialRoute: "/checkout",
         onGenerateRoute: AppRouter.onGenerateRoute,
         theme: theme(),
         home: HomeScreen(),
