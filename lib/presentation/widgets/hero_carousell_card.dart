@@ -20,7 +20,7 @@ class HeroCarrouselCard extends StatelessWidget {
         : product != null
             ? product!.imageUrl
             : "";
-    final name = category != null ? category!.name : ""; 
+    final name = category != null ? category!.name : "";
     return InkWell(
       onTap: () {
         if (category != null) {

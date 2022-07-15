@@ -7,14 +7,15 @@ class Cart extends Equatable {
   const Cart({this.products = const <Product>[]});
 
   Map productQuantity(List<Product> products) {
-    var quantity = Map();
-    products.forEach((product) {
+    products.sort((a, b) => a.name.compareTo(b.name));
+    var quantity = {};
+    for (var product in products) {
       if (!quantity.containsKey(product)) {
         quantity[product] = 1;
       } else {
         quantity[product] += 1;
       }
-    });
+    }
     return quantity;
   }
 
