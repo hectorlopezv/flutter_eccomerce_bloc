@@ -27,7 +27,7 @@ class SplashScreen extends StatelessWidget {
           Center(
             child: Image(
               image: AssetImage(
-                "assets/flutter_bird.jpeg",
+                "assets/images/flutter_bird.jpeg",
               ),
               width: 125,
               height: 125,

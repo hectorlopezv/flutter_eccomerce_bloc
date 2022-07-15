@@ -3,9 +3,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_eccomerce_bloc/logic/blocs/cart_bloc/cart_bloc.dart';
 
 class OrderSummary extends StatelessWidget {
-  const OrderSummary({
-    Key? key,
-  }) : super(key: key);
+  final EdgeInsets _padding;
+  const OrderSummary({Key? key, padding_user})
+      : _padding = padding_user ??
+            const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+        super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,8 +25,7 @@ class OrderSummary extends StatelessWidget {
                 thickness: 2,
               ),
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+                padding: _padding,
                 child: Column(
                   children: [
                     Row(

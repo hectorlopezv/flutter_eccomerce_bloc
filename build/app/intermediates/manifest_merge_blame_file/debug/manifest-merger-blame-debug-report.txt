@@ -24,7 +24,7 @@
 20    <application
 21        android:name="android.app.Application"
 22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-22-->[androidx.core:core:1.6.0] /Users/hvlopez/.gradle/caches/transforms-3/aa701b47cec244085d46a1a42fcc7fb9/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
+22-->[androidx.core:core:1.8.0] /Users/hvlopez/.gradle/caches/transforms-3/0ce731f8c62e88af9af421907435d7da/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
 23        android:debuggable="true"
 24        android:icon="@mipmap/ic_launcher"
 25        android:label="flutter_eccomerce_bloc" >
@@ -89,47 +89,65 @@
 71-->[com.google.firebase:firebase-firestore:24.2.0] /Users/hvlopez/.gradle/caches/transforms-3/52bb7ae6a8077fb5fa4462fd0303804c/transformed/jetified-firebase-firestore-24.2.0/AndroidManifest.xml:22:17-82
 72        </service>
 73
-74        <uses-library
-74-->[androidx.window:window:1.0.0-beta04] /Users/hvlopez/.gradle/caches/transforms-3/542a859793ec57d6a4d40865c7efc6d9/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
-75            android:name="androidx.window.extensions"
-75-->[androidx.window:window:1.0.0-beta04] /Users/hvlopez/.gradle/caches/transforms-3/542a859793ec57d6a4d40865c7efc6d9/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
-76            android:required="false" />
-76-->[androidx.window:window:1.0.0-beta04] /Users/hvlopez/.gradle/caches/transforms-3/542a859793ec57d6a4d40865c7efc6d9/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
-77        <uses-library
-77-->[androidx.window:window:1.0.0-beta04] /Users/hvlopez/.gradle/caches/transforms-3/542a859793ec57d6a4d40865c7efc6d9/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
-78            android:name="androidx.window.sidecar"
-78-->[androidx.window:window:1.0.0-beta04] /Users/hvlopez/.gradle/caches/transforms-3/542a859793ec57d6a4d40865c7efc6d9/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
-79            android:required="false" />
-79-->[androidx.window:window:1.0.0-beta04] /Users/hvlopez/.gradle/caches/transforms-3/542a859793ec57d6a4d40865c7efc6d9/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
-80
-81        <provider
-81-->[com.google.firebase:firebase-common:20.1.1] /Users/hvlopez/.gradle/caches/transforms-3/fccaa6a289edc53f66333a729d5bb147/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:26:9-31:39
-82            android:name="com.google.firebase.provider.FirebaseInitProvider"
-82-->[com.google.firebase:firebase-common:20.1.1] /Users/hvlopez/.gradle/caches/transforms-3/fccaa6a289edc53f66333a729d5bb147/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:27:13-77
-83            android:authorities="com.example.flutter_eccomerce_bloc.firebaseinitprovider"
-83-->[com.google.firebase:firebase-common:20.1.1] /Users/hvlopez/.gradle/caches/transforms-3/fccaa6a289edc53f66333a729d5bb147/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:28:13-72
-84            android:directBootAware="true"
-84-->[com.google.firebase:firebase-common:20.1.1] /Users/hvlopez/.gradle/caches/transforms-3/fccaa6a289edc53f66333a729d5bb147/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:29:13-43
-85            android:exported="false"
-85-->[com.google.firebase:firebase-common:20.1.1] /Users/hvlopez/.gradle/caches/transforms-3/fccaa6a289edc53f66333a729d5bb147/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:30:13-37
-86            android:initOrder="100" />
-86-->[com.google.firebase:firebase-common:20.1.1] /Users/hvlopez/.gradle/caches/transforms-3/fccaa6a289edc53f66333a729d5bb147/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:31:13-36
-87
-88        <activity
-88-->[com.google.android.gms:play-services-base:18.0.1] /Users/hvlopez/.gradle/caches/transforms-3/19fea4fb28dedd992824e13cc158e7a1/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
-89            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-89-->[com.google.android.gms:play-services-base:18.0.1] /Users/hvlopez/.gradle/caches/transforms-3/19fea4fb28dedd992824e13cc158e7a1/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
-90            android:exported="false"
-90-->[com.google.android.gms:play-services-base:18.0.1] /Users/hvlopez/.gradle/caches/transforms-3/19fea4fb28dedd992824e13cc158e7a1/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
-91            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-91-->[com.google.android.gms:play-services-base:18.0.1] /Users/hvlopez/.gradle/caches/transforms-3/19fea4fb28dedd992824e13cc158e7a1/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
-92
-93        <meta-data
-93-->[com.google.android.gms:play-services-basement:18.0.0] /Users/hvlopez/.gradle/caches/transforms-3/19a0dfd4021b70333b258b23187eb758/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
-94            android:name="com.google.android.gms.version"
-94-->[com.google.android.gms:play-services-basement:18.0.0] /Users/hvlopez/.gradle/caches/transforms-3/19a0dfd4021b70333b258b23187eb758/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
-95            android:value="@integer/google_play_services_version" />
-95-->[com.google.android.gms:play-services-basement:18.0.0] /Users/hvlopez/.gradle/caches/transforms-3/19a0dfd4021b70333b258b23187eb758/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
-96    </application>
+74        <provider
+74-->[:image_picker_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+75            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+75-->[:image_picker_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-82
+76            android:authorities="com.example.flutter_eccomerce_bloc.flutter.image_provider"
+76-->[:image_picker_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-74
+77            android:exported="false"
+77-->[:image_picker_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+78            android:grantUriPermissions="true" >
+78-->[:image_picker_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+79            <meta-data
+79-->[:image_picker_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:75
+80                android:name="android.support.FILE_PROVIDER_PATHS"
+80-->[:image_picker_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
+81                android:resource="@xml/flutter_image_picker_file_paths" />
+81-->[:image_picker_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-72
+82        </provider>
+83
+84        <uses-library
+84-->[androidx.window:window:1.0.0-beta04] /Users/hvlopez/.gradle/caches/transforms-3/542a859793ec57d6a4d40865c7efc6d9/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+85            android:name="androidx.window.extensions"
+85-->[androidx.window:window:1.0.0-beta04] /Users/hvlopez/.gradle/caches/transforms-3/542a859793ec57d6a4d40865c7efc6d9/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+86            android:required="false" />
+86-->[androidx.window:window:1.0.0-beta04] /Users/hvlopez/.gradle/caches/transforms-3/542a859793ec57d6a4d40865c7efc6d9/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+87        <uses-library
+87-->[androidx.window:window:1.0.0-beta04] /Users/hvlopez/.gradle/caches/transforms-3/542a859793ec57d6a4d40865c7efc6d9/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+88            android:name="androidx.window.sidecar"
+88-->[androidx.window:window:1.0.0-beta04] /Users/hvlopez/.gradle/caches/transforms-3/542a859793ec57d6a4d40865c7efc6d9/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+89            android:required="false" />
+89-->[androidx.window:window:1.0.0-beta04] /Users/hvlopez/.gradle/caches/transforms-3/542a859793ec57d6a4d40865c7efc6d9/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+90
+91        <provider
+91-->[com.google.firebase:firebase-common:20.1.1] /Users/hvlopez/.gradle/caches/transforms-3/fccaa6a289edc53f66333a729d5bb147/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:26:9-31:39
+92            android:name="com.google.firebase.provider.FirebaseInitProvider"
+92-->[com.google.firebase:firebase-common:20.1.1] /Users/hvlopez/.gradle/caches/transforms-3/fccaa6a289edc53f66333a729d5bb147/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:27:13-77
+93            android:authorities="com.example.flutter_eccomerce_bloc.firebaseinitprovider"
+93-->[com.google.firebase:firebase-common:20.1.1] /Users/hvlopez/.gradle/caches/transforms-3/fccaa6a289edc53f66333a729d5bb147/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:28:13-72
+94            android:directBootAware="true"
+94-->[com.google.firebase:firebase-common:20.1.1] /Users/hvlopez/.gradle/caches/transforms-3/fccaa6a289edc53f66333a729d5bb147/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:29:13-43
+95            android:exported="false"
+95-->[com.google.firebase:firebase-common:20.1.1] /Users/hvlopez/.gradle/caches/transforms-3/fccaa6a289edc53f66333a729d5bb147/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:30:13-37
+96            android:initOrder="100" />
+96-->[com.google.firebase:firebase-common:20.1.1] /Users/hvlopez/.gradle/caches/transforms-3/fccaa6a289edc53f66333a729d5bb147/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:31:13-36
 97
-98</manifest>
+98        <activity
+98-->[com.google.android.gms:play-services-base:18.0.1] /Users/hvlopez/.gradle/caches/transforms-3/19fea4fb28dedd992824e13cc158e7a1/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+99            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+99-->[com.google.android.gms:play-services-base:18.0.1] /Users/hvlopez/.gradle/caches/transforms-3/19fea4fb28dedd992824e13cc158e7a1/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+100            android:exported="false"
+100-->[com.google.android.gms:play-services-base:18.0.1] /Users/hvlopez/.gradle/caches/transforms-3/19fea4fb28dedd992824e13cc158e7a1/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+101            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+101-->[com.google.android.gms:play-services-base:18.0.1] /Users/hvlopez/.gradle/caches/transforms-3/19fea4fb28dedd992824e13cc158e7a1/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+102
+103        <meta-data
+103-->[com.google.android.gms:play-services-basement:18.0.0] /Users/hvlopez/.gradle/caches/transforms-3/19a0dfd4021b70333b258b23187eb758/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
+104            android:name="com.google.android.gms.version"
+104-->[com.google.android.gms:play-services-basement:18.0.0] /Users/hvlopez/.gradle/caches/transforms-3/19a0dfd4021b70333b258b23187eb758/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
+105            android:value="@integer/google_play_services_version" />
+105-->[com.google.android.gms:play-services-basement:18.0.0] /Users/hvlopez/.gradle/caches/transforms-3/19a0dfd4021b70333b258b23187eb758/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
+106    </application>
+107
+108</manifest>
