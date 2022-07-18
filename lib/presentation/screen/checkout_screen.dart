@@ -84,15 +84,22 @@ class CheckOutScreen extends StatelessWidget {
                             total: state.total!,
                           );
                         case PaymentMethod.credit_car:
-                          return Container(
-                            padding: EdgeInsets.all(20),
-                            clipBehavior: Clip.antiAlias,
-                            decoration: BoxDecoration(color: Colors.blueAccent),
-                            child: Text("Pay With Credit card",
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .headline5
-                                    ?.copyWith(color: Colors.white)),
+                          return GestureDetector(
+                            onTap: () {
+                              Navigator.pushNamed(
+                                  context, "/order-confirmation");
+                            },
+                            child: Container(
+                              padding: EdgeInsets.all(20),
+                              clipBehavior: Clip.antiAlias,
+                              decoration:
+                                  BoxDecoration(color: Colors.blueAccent),
+                              child: Text("Pay With Credit card",
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .headline5
+                                      ?.copyWith(color: Colors.white)),
+                            ),
                           );
                         case PaymentMethod.apple_pay:
                           // TODO: Handle this case.

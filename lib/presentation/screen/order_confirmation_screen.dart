@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_eccomerce_bloc/data/models/product_model.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_eccomerce_bloc/logic/blocs/cart_bloc/cart_bloc.dart';
 import 'package:flutter_eccomerce_bloc/presentation/widgets/custom_app_bar.dart';
 import 'package:flutter_eccomerce_bloc/presentation/widgets/custom_nav_bar.dart';
 import 'package:flutter_eccomerce_bloc/presentation/widgets/order_summary.dart';
@@ -98,19 +99,34 @@ class OrderConfirmationScreen extends StatelessWidget {
                       const SizedBox(
                         height: 5,
                       ),
-                      ListView(
-                        shrinkWrap: true,
-                        padding: EdgeInsets.zero,
-                        children: [
-                          OrderSummaryProduct(
-                            product: Product.products[0],
-                            quantity: 2,
-                          ),
-                          OrderSummaryProduct(
-                            product: Product.products[0],
-                            quantity: 3,
-                          ),
-                        ],
+                      BlocBuilder<CartBloc, CartState>(
+                        builder: (context, state) {
+                          if (state is CartLoading) {
+                            return Center(
+                              child: CircularProgressIndicator(),
+                            );
+                          }
+
+                          if (state is CartLoaded) {
+                            return ListView.builder(
+                              shrinkWrap: true,
+                              padding: EdgeInsets.zero,
+                              itemBuilder: (context, index) {
+                                final product = state.cart
+                                    .productQuantity(state.cart.products);
+                                return OrderSummaryProduct(
+                                  product: product.keys.elementAt(index),
+                                  quantity: product.values.elementAt(index),
+                                );
+                              },
+                              itemCount: state.cart
+                                  .productQuantity(state.cart.products)
+                                  .keys
+                                  .length,
+                            );
+                          }
+                          return Text("Something Went Wrong");
+                        },
                       )
                     ],
                   ),
