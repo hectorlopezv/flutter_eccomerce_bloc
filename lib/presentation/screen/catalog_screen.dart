@@ -43,7 +43,7 @@ class CatalogScreen extends StatelessWidget {
                   ),
                   children: state.products
                       .map(
-                        (product) => ProductCard(
+                        (product) => ProductCard.catalog(
                           product: product,
                         ),
                       )
