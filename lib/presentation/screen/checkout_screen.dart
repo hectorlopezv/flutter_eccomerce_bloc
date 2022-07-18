@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_eccomerce_bloc/data/models/paymeny_method_model.dart';
 import 'package:flutter_eccomerce_bloc/logic/blocs/checkout_bloc/checkout_bloc.dart';
 import 'package:flutter_eccomerce_bloc/presentation/widgets/custom_app_bar.dart';
+import 'package:flutter_eccomerce_bloc/presentation/widgets/custom_form_field.dart';
 import 'package:flutter_eccomerce_bloc/presentation/widgets/google_pay.dart';
 import 'package:flutter_eccomerce_bloc/presentation/widgets/order_summary.dart';
 
@@ -16,45 +17,6 @@ class CheckOutScreen extends StatelessWidget {
     return MaterialPageRoute(
         builder: (context) => CheckOutScreen(),
         settings: RouteSettings(name: routeName));
-  }
-
-  Widget _buildTextFormFiled(
-    String label,
-    BuildContext context,
-    Function(String)? onchaged, {
-    bool obscureText = false,
-    TextInputType textInputType = TextInputType.text,
-    IconData icon = Icons.access_alarm,
-    bool enabled = true,
-  }) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Row(
-        children: [
-          SizedBox(
-            width: 75,
-            child: Text(label, style: Theme.of(context).textTheme.bodyText1),
-          ),
-          Expanded(
-            child: TextFormField(
-              onChanged: onchaged,
-              obscureText: obscureText,
-              keyboardType: textInputType,
-              enabled: enabled,
-              decoration: InputDecoration(
-                isDense: true,
-                contentPadding: EdgeInsets.only(left: 10),
-                focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Colors.black,
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
   }
 
   @override
@@ -158,63 +120,57 @@ class CheckOutScreen extends StatelessWidget {
                             "Customer Information",
                             style: Theme.of(context).textTheme.headline3,
                           ),
-                          _buildTextFormFiled(
-                            "Email",
-                            context,
-                            (value) {
+                          CustomTextFormField(
+                            onchaged: (value) {
                               context
                                   .read<CheckoutBloc>()
                                   .add(UpdateCheckoutOrder(email: value));
                             },
+                            label: "Email",
                           ),
-                          _buildTextFormFiled(
-                            "Full Name",
-                            context,
-                            (value) {
+                          CustomTextFormField(
+                            onchaged: (value) {
                               context
                                   .read<CheckoutBloc>()
                                   .add(UpdateCheckoutOrder(fullName: value));
                             },
+                            label: "FullName",
                           ),
                           Text(
                             "Delivery Innformation",
                             style: Theme.of(context).textTheme.headline3,
                           ),
-                          _buildTextFormFiled(
-                            "Address",
-                            context,
-                            (value) {
-                              context
-                                  .read<CheckoutBloc>()
-                                  .add(UpdateCheckoutOrder(address: value));
+                          CustomTextFormField(
+                            onchaged: (value) {
+                              context.read<CheckoutBloc>().add(
+                                    UpdateCheckoutOrder(address: value),
+                                  );
                             },
+                            label: "Address",
                           ),
-                          _buildTextFormFiled(
-                            "City",
-                            context,
-                            (value) {
-                              context
-                                  .read<CheckoutBloc>()
-                                  .add(UpdateCheckoutOrder(city: value));
+                          CustomTextFormField(
+                            onchaged: (value) {
+                              context.read<CheckoutBloc>().add(
+                                    UpdateCheckoutOrder(city: value),
+                                  );
                             },
+                            label: "City",
                           ),
-                          _buildTextFormFiled(
-                            "Country",
-                            context,
-                            (value) {
-                              context
-                                  .read<CheckoutBloc>()
-                                  .add(UpdateCheckoutOrder(country: value));
+                          CustomTextFormField(
+                            onchaged: (value) {
+                              context.read<CheckoutBloc>().add(
+                                    UpdateCheckoutOrder(country: value),
+                                  );
                             },
+                            label: "Country",
                           ),
-                          _buildTextFormFiled(
-                            "ZipCode",
-                            context,
-                            (value) {
-                              context
-                                  .read<CheckoutBloc>()
-                                  .add(UpdateCheckoutOrder(zipCode: value));
+                          CustomTextFormField(
+                            onchaged: (value) {
+                              context.read<CheckoutBloc>().add(
+                                    UpdateCheckoutOrder(zipCode: value),
+                                  );
                             },
+                            label: "ZipCode",
                           ),
                           Container(
                             width: MediaQuery.of(context).size.width,
@@ -273,3 +229,4 @@ class CheckOutScreen extends StatelessWidget {
     );
   }
 }
+
