@@ -47,6 +47,7 @@ MERGED from [:cloud_firestore] /Users/hvlopez/AndroidStudioProjects/flutter_ecco
 MERGED from [:firebase_core] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
 MERGED from [:image_picker_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-21:12
 MERGED from [:flutter_plugin_android_lifecycle] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:path_provider_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:pay_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/pay_android/intermediates/merged_manifest/debug/AndroidManifest.xml:6:1-19:12
 MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/hvlopez/.gradle/caches/transforms-3/e1f5bf00836c889852a9a2014464d260/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.window:window:1.0.0-beta04] /Users/hvlopez/.gradle/caches/transforms-3/542a859793ec57d6a4d40865c7efc6d9/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:17:1-33:12
@@ -77,9 +78,9 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/hvlopez/.gradle
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/hvlopez/.gradle/caches/transforms-3/1dfcd597f157c8506cb9f4f998efecca/transformed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/hvlopez/.gradle/caches/transforms-3/9633f98cacc600c55cd8e13ad9ef85d0/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/hvlopez/.gradle/caches/transforms-3/4347c219bb49b5517c0901825a211a72/transformed/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [io.grpc:grpc-android:1.44.1] /Users/hvlopez/.gradle/caches/transforms-3/6bd2ae4dd04c2b64a50f7e9188ad8e3d/transformed/jetified-grpc-android-1.44.1/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/hvlopez/.gradle/caches/transforms-3/f95b31beb5b7f2eb055a97bf2e6fcf0f/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/hvlopez/.gradle/caches/transforms-3/8129b238d4d069661aca07bff47ad65b/transformed/jetified-protolite-well-known-types-18.0.0/AndroidManifest.xml:2:1-11:12
-MERGED from [io.grpc:grpc-android:1.44.1] /Users/hvlopez/.gradle/caches/transforms-3/6bd2ae4dd04c2b64a50f7e9188ad8e3d/transformed/jetified-grpc-android-1.44.1/AndroidManifest.xml:2:1-11:12
 INJECTED from /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/android/app/src/debug/AndroidManifest.xml:1:1-8:12
 INJECTED from /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/android/app/src/debug/AndroidManifest.xml:1:1-8:12
 INJECTED from /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/android/app/src/debug/AndroidManifest.xml:1:1-8:12
@@ -109,6 +110,8 @@ MERGED from [:image_picker_android] /Users/hvlopez/AndroidStudioProjects/flutter
 MERGED from [:image_picker_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:flutter_plugin_android_lifecycle] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:flutter_plugin_android_lifecycle] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:pay_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/pay_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-11:41
 MERGED from [:pay_android] /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/build/pay_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-11:41
 MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/hvlopez/.gradle/caches/transforms-3/e1f5bf00836c889852a9a2014464d260/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
@@ -169,12 +172,12 @@ MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/hvlopez/.gradle/cache
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/hvlopez/.gradle/caches/transforms-3/9633f98cacc600c55cd8e13ad9ef85d0/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/hvlopez/.gradle/caches/transforms-3/4347c219bb49b5517c0901825a211a72/transformed/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/hvlopez/.gradle/caches/transforms-3/4347c219bb49b5517c0901825a211a72/transformed/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [io.grpc:grpc-android:1.44.1] /Users/hvlopez/.gradle/caches/transforms-3/6bd2ae4dd04c2b64a50f7e9188ad8e3d/transformed/jetified-grpc-android-1.44.1/AndroidManifest.xml:5:5-7:41
+MERGED from [io.grpc:grpc-android:1.44.1] /Users/hvlopez/.gradle/caches/transforms-3/6bd2ae4dd04c2b64a50f7e9188ad8e3d/transformed/jetified-grpc-android-1.44.1/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/hvlopez/.gradle/caches/transforms-3/f95b31beb5b7f2eb055a97bf2e6fcf0f/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/hvlopez/.gradle/caches/transforms-3/f95b31beb5b7f2eb055a97bf2e6fcf0f/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/hvlopez/.gradle/caches/transforms-3/8129b238d4d069661aca07bff47ad65b/transformed/jetified-protolite-well-known-types-18.0.0/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/hvlopez/.gradle/caches/transforms-3/8129b238d4d069661aca07bff47ad65b/transformed/jetified-protolite-well-known-types-18.0.0/AndroidManifest.xml:7:5-9:41
-MERGED from [io.grpc:grpc-android:1.44.1] /Users/hvlopez/.gradle/caches/transforms-3/6bd2ae4dd04c2b64a50f7e9188ad8e3d/transformed/jetified-grpc-android-1.44.1/AndroidManifest.xml:5:5-7:41
-MERGED from [io.grpc:grpc-android:1.44.1] /Users/hvlopez/.gradle/caches/transforms-3/6bd2ae4dd04c2b64a50f7e9188ad8e3d/transformed/jetified-grpc-android-1.44.1/AndroidManifest.xml:5:5-7:41
 INJECTED from /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/android/app/src/debug/AndroidManifest.xml
 INJECTED from /Users/hvlopez/AndroidStudioProjects/flutter_eccomerce_bloc/android/app/src/debug/AndroidManifest.xml
 	android:targetSdkVersion

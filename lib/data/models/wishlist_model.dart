@@ -14,7 +14,7 @@ class WishList extends Equatable {
   @override
   List<Object> get props => [products];
 
-  WishList copyWith({
+   WishList copyWith({
     List<Product>? products,
   }) {
     return WishList(

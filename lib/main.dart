@@ -14,13 +14,22 @@ import 'package:flutter_eccomerce_bloc/logic/blocs/wishlist_bloc/wishlist_bloc.d
 import 'package:flutter_eccomerce_bloc/presentation/config/routing/app_router.dart';
 import 'package:flutter_eccomerce_bloc/presentation/config/styles/theme.dart';
 import 'package:flutter_eccomerce_bloc/presentation/screen/home_screen.dart';
+import 'package:hydrated_bloc/hydrated_bloc.dart';
+import 'package:path_provider/path_provider.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+  final appDocumentDirectory = await getApplicationDocumentsDirectory();
+  final storage = await HydratedStorage.build(
+    storageDirectory: appDocumentDirectory,
+  );
 
-  BlocOverrides.runZoned(
-    () => runApp(const MyApp()),
+  HydratedBlocOverrides.runZoned(
+    () => runApp(
+      const MyApp(),
+    ),
+    storage: storage,
     blocObserver: SimpleBlocObserver(),
   );
 }
@@ -34,7 +43,8 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider<WishlistBloc>(
-          create: (_) => WishlistBloc()..add(LoadWishList()),
+          lazy: false,
+          create: (_) => WishlistBloc(),
         ),
         BlocProvider<CartBloc>(
           create: (_) => CartBloc()..add(LoadCart()),

@@ -14,7 +14,7 @@ class AddProductToWishList extends WishlistEvent {
   @override
   List<Object> get props => [product];
 
-  AddProductToWishList(this.product);
+  const AddProductToWishList(this.product);
 }
 
 class RemoveProductFromWishList extends WishlistEvent {
@@ -22,5 +22,14 @@ class RemoveProductFromWishList extends WishlistEvent {
   @override
   List<Object> get props => [product];
 
-  RemoveProductFromWishList(this.product);
+  const RemoveProductFromWishList(this.product);
+}
+
+
+class UpdateState extends WishlistEvent {
+  final List<Product> products;
+  @override
+  List<Object> get props => [products];
+
+  const UpdateState(this.products);
 }

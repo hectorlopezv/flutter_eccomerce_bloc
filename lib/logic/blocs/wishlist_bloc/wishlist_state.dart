@@ -11,12 +11,17 @@ class WishlistLoading extends WishlistState {
   List<Object> get props => [];
 }
 
+class WishlistNotLoading extends WishlistState {
+  @override
+  List<Object> get props => [];
+}
+
 class WishlistLoaded extends WishlistState {
   final WishList wishList;
   @override
   List<Object> get props => [wishList];
 
-  WishlistLoaded({this.wishList = const WishList()});
+  const WishlistLoaded({this.wishList   = const WishList()});
 }
 
 class WishlistError extends WishlistState {

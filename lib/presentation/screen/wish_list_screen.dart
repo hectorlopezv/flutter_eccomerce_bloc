@@ -29,6 +29,11 @@ class WishListScreen extends StatelessWidget {
                   child: CircularProgressIndicator(),
                 );
               }
+              if (state is WishlistNotLoading) {
+                return Center(
+                  child: Text("No products in wishlist"),
+                );
+              }
               if (state is WishlistLoaded) {
                 return GridView.builder(
                   padding: const EdgeInsets.symmetric(horizontal: 8),
