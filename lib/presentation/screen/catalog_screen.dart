@@ -5,6 +5,7 @@ import 'package:flutter_eccomerce_bloc/logic/blocs/product_bloc/product_bloc.dar
 import 'package:flutter_eccomerce_bloc/presentation/widgets/custom_app_bar.dart';
 import 'package:flutter_eccomerce_bloc/presentation/widgets/custom_nav_bar.dart';
 import 'package:flutter_eccomerce_bloc/presentation/widgets/product_card.dart';
+import 'package:flutter_eccomerce_bloc/presentation/widgets/search_box.dart';
 
 class CatalogScreen extends StatelessWidget {
   final Category category;
@@ -24,40 +25,45 @@ class CatalogScreen extends StatelessWidget {
       body: ScrollableAppBar(
         title: category.name,
         children: [
-          BlocBuilder<ProductBloc, ProductState>(
-            builder: (context, state) {
-              if (state is ProductlistLoading) {
-                return Center(
-                  child: CircularProgressIndicator(),
-                );
-              }
+          Column(
+            children: [
+              SearchBox(category: category),
+              BlocBuilder<ProductBloc, ProductState>(
+                builder: (context, state) {
+                  if (state is ProductlistLoading) {
+                    return Center(
+                      child: CircularProgressIndicator(),
+                    );
+                  }
 
-              if (state is ProductlistLoaded) {
-                return GridView(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-                  shrinkWrap: true,
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    childAspectRatio: 1.15,
-                  ),
-                  children: state.products
-                      .map(
-                        (product) => ProductCard.catalog(
-                          product: product,
-                        ),
-                      )
-                      .where(
-                        (element) => element.product.category == category.name,
-                      )
-                      .toList(),
-                );
-              }
+                  if (state is ProductlistLoaded) {
+                    return GridView(
+                      padding:
+                          const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+                      shrinkWrap: true,
+                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        childAspectRatio: 1.15,
+                      ),
+                      children: state.products
+                          .map(
+                            (product) => ProductCard.catalog(
+                              product: product,
+                            ),
+                          )
+                          .where(
+                            (element) => element.product.category == category.name,
+                          )
+                          .toList(),
+                    );
+                  }
 
-              return Center(
-                child: Text("Something Went Wront"),
-              );
-            },
+                  return Center(
+                    child: Text("Something Went Wront"),
+                  );
+                },
+              ),
+            ],
           ),
         ],
       ),

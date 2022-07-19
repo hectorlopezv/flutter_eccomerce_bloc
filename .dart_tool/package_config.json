@@ -194,6 +194,36 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "google_sign_in",
+      "rootUri": "file:///Users/hvlopez/.pub-cache/hosted/pub.dartlang.org/google_sign_in-5.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "google_sign_in_android",
+      "rootUri": "file:///Users/hvlopez/.pub-cache/hosted/pub.dartlang.org/google_sign_in_android-6.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "google_sign_in_ios",
+      "rootUri": "file:///Users/hvlopez/.pub-cache/hosted/pub.dartlang.org/google_sign_in_ios-5.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "google_sign_in_platform_interface",
+      "rootUri": "file:///Users/hvlopez/.pub-cache/hosted/pub.dartlang.org/google_sign_in_platform_interface-2.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "google_sign_in_web",
+      "rootUri": "file:///Users/hvlopez/.pub-cache/hosted/pub.dartlang.org/google_sign_in_web-0.10.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "hive",
       "rootUri": "file:///Users/hvlopez/.pub-cache/hosted/pub.dartlang.org/hive-2.2.3",
       "packageUri": "lib/",
@@ -404,6 +434,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "quiver",
+      "rootUri": "file:///Users/hvlopez/.pub-cache/hosted/pub.dartlang.org/quiver-3.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///Users/hvlopez/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -494,7 +530,7 @@
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2022-07-19T16:20:31.716441Z",
+  "generated": "2022-07-19T16:26:12.496816Z",
   "generator": "pub",
   "generatorVersion": "2.17.6"
 }

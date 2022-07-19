@@ -17,6 +17,7 @@ import 'package:flutter_eccomerce_bloc/logic/blocs/checkout_bloc/checkout_bloc.d
 import 'package:flutter_eccomerce_bloc/logic/blocs/observer_logs_bloc/observer_logs_bloc.dart';
 import 'package:flutter_eccomerce_bloc/logic/blocs/payment_bloc/payment_bloc.dart';
 import 'package:flutter_eccomerce_bloc/logic/blocs/product_bloc/product_bloc.dart';
+import 'package:flutter_eccomerce_bloc/logic/blocs/search_bloc/search_bloc.dart';
 import 'package:flutter_eccomerce_bloc/logic/blocs/wishlist_bloc/wishlist_bloc.dart';
 import 'package:flutter_eccomerce_bloc/logic/cubit/login_cubit/login_cubit.dart';
 import 'package:flutter_eccomerce_bloc/logic/cubit/signup_cubit/signup_cubit.dart';
@@ -52,19 +53,19 @@ class MyApp extends StatelessWidget {
     return MultiRepositoryProvider(
       providers: [
         RepositoryProvider(
-          create: ((context) => UserRepository(
-                userFirebaseApi: UserFirebaseApi(
-                  firestore: FirebaseFirestore.instance,
-                ),
-              )),
+          create: (context) => UserRepository(
+            userFirebaseApi: UserFirebaseApi(
+              firestore: FirebaseFirestore.instance,
+            ),
+          ),
         ),
         RepositoryProvider(
-          create: ((context) => AuthRepository(
-                userRepository: context.read<UserRepository>(),
-                authFirebaseApi: AuthFirebaseApi(
-                  firebaseAuth: FirebaseAuth.instance,
-                ),
-              )),
+          create: (context) => AuthRepository(
+            userRepository: context.read<UserRepository>(),
+            authFirebaseApi: AuthFirebaseApi(
+              firebaseAuth: FirebaseAuth.instance,
+            ),
+          ),
         ),
       ],
       child: MultiBlocProvider(
@@ -103,15 +104,20 @@ class MyApp extends StatelessWidget {
               userRepository: context.read<UserRepository>(),
             ),
           ),
-          BlocProvider(
+          BlocProvider<LoginCubit>(
             create: (context) => LoginCubit(
               authRepository: context.read<AuthRepository>(),
             ),
           ),
-          BlocProvider(
+          BlocProvider<SignupCubit>(
             create: (context) => SignupCubit(
               authRepository: context.read<AuthRepository>(),
             ),
+          ),
+          BlocProvider<SearchBloc>(
+            create: (context) => SearchBloc(
+              productBloc: context.read<ProductBloc>(),
+            )..add(LoadSearch()),
           ),
         ],
         child: MaterialApp(
