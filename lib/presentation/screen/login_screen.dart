@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_eccomerce_bloc/logic/cubit/login_cubit/login_cubit.dart';
 import 'package:flutter_eccomerce_bloc/presentation/widgets/custom_app_bar.dart';
 import 'package:flutter_eccomerce_bloc/presentation/widgets/custom_nav_bar.dart';
 
@@ -44,7 +46,9 @@ class LoginScreen extends StatelessWidget {
                   ),
                   primary: Colors.black,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  context.read<LoginCubit>().LoginWithCredentialas(context);
+                },
                 child: Text("Login"),
               ),
             ],
@@ -59,7 +63,9 @@ class _EmailInput extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
-      onChanged: (email) {},
+      onChanged: (email) {
+        context.read<LoginCubit>().onEmailChanged(email);
+      },
       decoration: InputDecoration(
         labelText: "Email",
       ),
@@ -71,7 +77,9 @@ class _PasswordInput extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
-      onChanged: (password) {},
+      onChanged: (password) {
+        context.read<LoginCubit>().onPassWordChanged(password);
+      },
       obscureText: true,
       decoration: InputDecoration(
         labelText: "PassWord",

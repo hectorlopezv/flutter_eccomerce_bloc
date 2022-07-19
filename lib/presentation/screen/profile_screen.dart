@@ -47,6 +47,7 @@ class ProfileScreen extends StatelessWidget {
                 return ElevatedButton(
                   onPressed: () {
                     context.read<AuthRepository>().signOut();
+                       Navigator.pushNamed(context, "/login");
                   },
                   child: Text("Signout"),
                 );
