@@ -5,9 +5,12 @@ import 'package:flutter_eccomerce_bloc/presentation/screen/cart_screen.dart';
 import 'package:flutter_eccomerce_bloc/presentation/screen/catalog_screen.dart';
 import 'package:flutter_eccomerce_bloc/presentation/screen/checkout_screen.dart';
 import 'package:flutter_eccomerce_bloc/presentation/screen/home_screen.dart';
+import 'package:flutter_eccomerce_bloc/presentation/screen/login_screen.dart';
 import 'package:flutter_eccomerce_bloc/presentation/screen/order_confirmation_screen.dart';
 import 'package:flutter_eccomerce_bloc/presentation/screen/payment_selection_screen.dart';
 import 'package:flutter_eccomerce_bloc/presentation/screen/product_screen.dart';
+import 'package:flutter_eccomerce_bloc/presentation/screen/profile_screen.dart';
+import 'package:flutter_eccomerce_bloc/presentation/screen/sign_up_screen.dart';
 import 'package:flutter_eccomerce_bloc/presentation/screen/splash_screen.dart';
 import 'package:flutter_eccomerce_bloc/presentation/screen/wish_list_screen.dart';
 
@@ -30,6 +33,12 @@ class AppRouter {
         return PaymentSelectionScreen.route();
       case OrderConfirmationScreen.routeName:
         return OrderConfirmationScreen.route();
+      case LoginScreen.routeName:
+        return LoginScreen.route();
+      case SignUpScreen.routeName:
+        return SignUpScreen.route();
+      case ProfileScreen.routeName:
+        return ProfileScreen.route();
       case CatalogScreen.routeName:
         return CatalogScreen.route(category: settings.arguments as Category);
       default:

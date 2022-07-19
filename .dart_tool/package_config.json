@@ -110,6 +110,24 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "firebase_auth",
+      "rootUri": "file:///Users/hvlopez/.pub-cache/hosted/pub.dartlang.org/firebase_auth-3.4.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "firebase_auth_platform_interface",
+      "rootUri": "file:///Users/hvlopez/.pub-cache/hosted/pub.dartlang.org/firebase_auth_platform_interface-6.3.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "firebase_auth_web",
+      "rootUri": "file:///Users/hvlopez/.pub-cache/hosted/pub.dartlang.org/firebase_auth_web-4.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
       "name": "firebase_core",
       "rootUri": "file:///Users/hvlopez/.pub-cache/hosted/pub.dartlang.org/firebase_core-1.19.2",
       "packageUri": "lib/",
@@ -476,7 +494,7 @@
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2022-07-18T17:07:31.052045Z",
+  "generated": "2022-07-19T02:27:26.606521Z",
   "generator": "pub",
   "generatorVersion": "2.17.5"
 }

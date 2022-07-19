@@ -37,7 +37,7 @@ class CustomNavBar extends StatelessWidget {
             ),
             IconButton(
               onPressed: () {
-                nextRoute(context, "/user");
+                nextRoute(context, "/profile");
               },
               icon: const Icon(
                 Icons.person,

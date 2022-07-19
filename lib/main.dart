@@ -1,9 +1,16 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_eccomerce_bloc/data/dataProviders/aut_firebase_api.dart';
+import 'package:flutter_eccomerce_bloc/data/dataProviders/user_firebase_api.dart';
+import 'package:flutter_eccomerce_bloc/data/repositories/auth/auth_repository.dart';
 import 'package:flutter_eccomerce_bloc/data/repositories/category/category_repository.dart';
 import 'package:flutter_eccomerce_bloc/data/repositories/checkout/checkout_repository.dart';
 import 'package:flutter_eccomerce_bloc/data/repositories/product/product_repository.dart';
+import 'package:flutter_eccomerce_bloc/data/repositories/user/user_repository.dart';
+import 'package:flutter_eccomerce_bloc/logic/blocs/auth_bloc/auth_bloc.dart';
 import 'package:flutter_eccomerce_bloc/logic/blocs/cart_bloc/cart_bloc.dart';
 import 'package:flutter_eccomerce_bloc/logic/blocs/category_bloc/category_bloc.dart';
 import 'package:flutter_eccomerce_bloc/logic/blocs/checkout_bloc/checkout_bloc.dart';
@@ -14,6 +21,7 @@ import 'package:flutter_eccomerce_bloc/logic/blocs/wishlist_bloc/wishlist_bloc.d
 import 'package:flutter_eccomerce_bloc/presentation/config/routing/app_router.dart';
 import 'package:flutter_eccomerce_bloc/presentation/config/styles/theme.dart';
 import 'package:flutter_eccomerce_bloc/presentation/screen/home_screen.dart';
+import 'package:flutter_eccomerce_bloc/presentation/screen/splash_screen.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
 
@@ -40,42 +48,66 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
+    return MultiRepositoryProvider(
       providers: [
-        BlocProvider<WishlistBloc>(
-          lazy: false,
-          create: (_) => WishlistBloc(),
+        RepositoryProvider(
+          create: ((context) => AuthRepository(
+                authFirebaseApi:
+                    AuthFirebaseApi(firebaseAuth: FirebaseAuth.instance),
+              )),
         ),
-        BlocProvider<CartBloc>(
-          create: (_) => CartBloc()..add(LoadCart()),
-        ),
-        BlocProvider<CategoryBloc>(
-          create: (_) => CategoryBloc(categoryRepository: CategoryRepository())
-            ..add(LoadCategoryList()),
-        ),
-        BlocProvider<ProductBloc>(
-          create: (_) => ProductBloc(productRepository: ProductRepository())
-            ..add(LoadProductList()),
-        ),
-        BlocProvider<PaymentBloc>(
-          create: (context) => PaymentBloc()
-            ..add(
-              LoadPaymentMethod(),
-            ),
-        ),
-        BlocProvider<CheckoutBloc>(
-          create: (context) => CheckoutBloc(
-              checkoutRepository: CheckOutRepository(),
-              cartBloc: context.read<CartBloc>(),
-              paymentBloc: context.read<PaymentBloc>()),
-        ),
+        RepositoryProvider(
+          create: ((context) => UserRepository(
+                userFirebaseApi: UserFirebaseApi(
+                  firestore: FirebaseFirestore.instance,
+                ),
+              )),
+        )
       ],
-      child: MaterialApp(
-        title: 'Flutter Demo',
-        initialRoute: "/",
-        onGenerateRoute: AppRouter.onGenerateRoute,
-        theme: theme(),
-        home: HomeScreen(),
+      child: MultiBlocProvider(
+        providers: [
+          BlocProvider<WishlistBloc>(
+            lazy: false,
+            create: (_) => WishlistBloc(),
+          ),
+          BlocProvider<CartBloc>(
+            create: (_) => CartBloc()..add(LoadCart()),
+          ),
+          BlocProvider<CategoryBloc>(
+            create: (_) =>
+                CategoryBloc(categoryRepository: CategoryRepository())
+                  ..add(LoadCategoryList()),
+          ),
+          BlocProvider<ProductBloc>(
+            create: (_) => ProductBloc(productRepository: ProductRepository())
+              ..add(LoadProductList()),
+          ),
+          BlocProvider<PaymentBloc>(
+            create: (context) => PaymentBloc()
+              ..add(
+                LoadPaymentMethod(),
+              ),
+          ),
+          BlocProvider<CheckoutBloc>(
+            create: (context) => CheckoutBloc(
+                checkoutRepository: CheckOutRepository(),
+                cartBloc: context.read<CartBloc>(),
+                paymentBloc: context.read<PaymentBloc>()),
+          ),
+          BlocProvider<AuthBloc>(
+            create: (context) => AuthBloc(
+              authRepository: context.read<AuthRepository>(),
+              userRepository: context.read<UserRepository>(),
+            ),
+          ),
+        ],
+        child: MaterialApp(
+          title: 'Flutter Demo',
+          initialRoute: "/profile",
+          onGenerateRoute: AppRouter.onGenerateRoute,
+          theme: theme(),
+          home: HomeScreen(),
+        ),
       ),
     );
   }
